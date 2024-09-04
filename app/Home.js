@@ -56,6 +56,7 @@ export default Home = ({ navigation }) => {
     try {
       const response = await fetch(BASE_URL);
       const json = await response.json();
+      console.log(json);
       const menu = json.menu.map((item, index) => ({
         id: index + 1,
         name: item.name,
